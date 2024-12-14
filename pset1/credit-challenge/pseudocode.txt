@@ -1,0 +1,44 @@
+START
+    Define a long variable 'number'  // User input for the credit card number
+    Define an integer variable 'length'  // Length of the credit card number
+    Define a long variable 'prefix'  // Prefix to identify card type
+
+    Repeat:
+        Ask the user "Number:"
+        Read the value entered by the user into 'number'
+
+        If 'number' is invalid (e.g., negative or non-numeric):
+            Print "Invalid input. Enter a valid credit card number."
+        Else:
+            Continue
+
+    While 'number' is invalid
+
+    Call the function 'is_valid(number)' and store the result
+
+    If the result is false:
+        Print "INVALID"
+        Exit
+
+    Call 'get_length(number)' and store the result in 'length'
+
+    If 'length' is 13:
+        Call 'get_prefix(number, 1)' and store the result in 'prefix'  // VISA (13 digits)
+    Else If 'length' is 15:
+        Call 'get_prefix(number, 2)' and store the result in 'prefix'  // AMEX (15 digits)
+    Else If 'length' is 16:
+        Call 'get_prefix(number, 2)' and store the result in 'prefix'  // MASTERCARD (16 digits)
+    Else:
+        Print "INVALID"
+        Exit
+
+    If 'length' is 15 AND ('prefix' is 34 OR 'prefix' is 37):
+        Print "AMEX"
+    Else If 'length' is 16 AND ('prefix' is between 51 and 55):
+        Print "MASTERCARD"
+    Else If ('length' is 13 OR 'length' is 16) AND 'prefix' divided by 10 equals 4:
+        Print "VISA"
+    Else:
+        Print "INVALID"
+
+END
