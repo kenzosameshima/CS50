@@ -1,0 +1,30 @@
+START
+    Define a float variable 'change'
+    Define an integer variable 'cents'
+    Define an integer variable 'coin_count'
+
+    Repeat:
+        Ask the user "Change owed:"
+        Read the value entered by the user into 'change'
+
+        If 'change' is less than 0:
+            Print "Invalid input. Enter a positive amount."
+        Else:
+            Continue
+
+    While 'change' is less than 0
+
+    Set 'cents' to round(change * 100)  // Convert to cents, round to avoid floating-point issues
+
+    Set 'coin_count' to 0  // Initialize coin count
+
+    Define an array 'coins' with denominations: [25, 10, 5, 1]
+
+    For each coin in 'coins':
+        While 'cents' is greater than or equal to the coin:
+            Subtract the coin value from 'cents'
+            Increment 'coin_count'
+
+    Print 'coin_count' coins
+
+END
