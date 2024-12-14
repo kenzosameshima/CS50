@@ -1,0 +1,23 @@
+Start:
+    Define an integer variable called 'height'
+
+    Repeat:
+        Ask the user "height:"
+        Read the value entered by the user into 'height'
+
+        If 'height' is less than 1 or greater than 8:
+            Print "Invalid input. Enter a number between 1 and 8."
+        Else:
+            Continue
+
+    While height < 1 or height > 8
+
+    For each line from 1 to height:
+        Calculate the number of hashes (#) as equal to the current line number
+        Calculate the number of spaces as equal to (height - current line number)
+
+        Print the spaces
+        Print the hashes (#)
+        Print a newline after each row
+
+End
