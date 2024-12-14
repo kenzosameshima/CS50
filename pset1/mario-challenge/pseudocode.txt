@@ -1,0 +1,30 @@
+START
+    Define an integer variable 'height'  // User input for the height of the pyramid
+
+    Repeat:
+        Ask the user "Height:"
+        Read the value entered by the user into 'height'
+
+        If 'height' is less than 1 OR 'height' is greater than 8:
+            Print "Height must be between 1 and 8."
+        Else:
+            Continue
+
+    While 'height' is less than 1 OR 'height' is greater than 8
+
+    For 'i' from 1 to 'height' (inclusive):
+        // For each row of the pyramid
+        For 'j' from 'i' to 'height - 1' (inclusive):
+            Print a space (for the left pyramid)
+
+        For 'j' from 1 to 'i' (inclusive):
+            Print a hash symbol (#) (left side of the pyramid)
+
+        Print two spaces (to separate the two pyramids)
+
+        For 'j' from 1 to 'i' (inclusive):
+            Print a hash symbol (#) (right side of the pyramid)
+
+        Print a new line (to move to the next row)
+
+END
